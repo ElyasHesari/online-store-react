@@ -12,8 +12,8 @@ const products = [
 const Controls = (props) => {
   return (
     <div className="controls">
-      <div>
-        <p>total price: {props.price}</p>
+      <div className="price">
+        <p>Total Price: {props.price}</p>
       </div>
       {products.map((item) => {
         return (
@@ -23,8 +23,10 @@ const Controls = (props) => {
             add={() => props.productAdd(item.type)}
             remove={() => props.productRemove(item.type)}
           />
+          
         );
       })}
+      <button className="order-btn">Order</button>
     </div>
   );
 };
