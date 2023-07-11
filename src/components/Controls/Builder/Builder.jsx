@@ -5,7 +5,7 @@ function Builder(props) {
     <div className="builder">
       <div>{props.title}</div>
       <button onClick={props.add}>Add</button>
-      <button>Remove</button>
+      <button onClick={props.remove}>Remove</button>
     </div>
   );
 }
